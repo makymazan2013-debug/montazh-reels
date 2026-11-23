@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Дмитрий · Монтаж рилсов от 250 ₽</title>
+<meta name="description" content="Монтаж Reels и Shorts, который досматривают до конца и после которого пишут в директ. Цена от 250 ₽ за ролик: чем больше серия, тем выгоднее. Удалённо, в срок.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bk:#101010;--or:#F57C3E;--bl:#B9C9D6;--wh:#F6F4F0;--mut:#9a9a9a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--wh);font-family:Inter,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+h1,h2,h3,.big{font-family:Unbounded,Inter,sans-serif;line-height:1.02;letter-spacing:-.02em}
+a{color:inherit}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+/* курсорное свечение */
+.glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(245,124,62,.28),transparent 65%);transform:translate(-50%,-50%);z-index:0;transition:opacity .3s}
+/* кнопки */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#111;padding:18px 32px;border-radius:999px;text-decoration:none;font-weight:700;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;will-change:transform}
+.btn:hover{box-shadow:0 12px 40px rgba(245,124,62,.45)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s infinite}
+.btn.ghost{background:transparent;color:var(--wh);border:1.5px solid #444}.btn.ghost::after{display:none}
+@keyframes shine{60%,100%{transform:translateX(120%)}}
+/* шапка */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 28px;mix-blend-mode:normal;backdrop-filter:blur(8px);background:rgba(16,16,16,.55)}
+header b{font-family:Unbounded;font-size:15px}
+header nav a{margin-left:22px;text-decoration:none;font-size:14px;color:#ccc}header nav a:hover{color:var(--or)}
+header .btn{padding:10px 20px;font-size:14px}
+/* hero */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 14s ease-in-out infinite}
+.b1{width:520px;height:520px;background:var(--or);right:-120px;top:5%}
+.b2{width:420px;height:420px;background:#3b4a58;left:-120px;bottom:-60px;animation-delay:-6s}
+@keyframes float{50%{transform:translate(40px,-50px) scale(1.15)}}
+.hero .tag{display:inline-block;border:1px solid #444;border-radius:999px;padding:6px 16px;font-size:13px;color:var(--bl);margin-bottom:26px}
+.hero h1{font-size:clamp(26px,6.2vw,112px);overflow-wrap:anywhere;font-weight:900;text-transform:uppercase}
+.hero h1 .l{display:inline-block;opacity:0;transform:translateY(60%) rotate(4deg);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 em{font-style:normal;color:var(--or)}
+@keyframes up{to{opacity:1;transform:none}}
+.hero p.sub{font-size:clamp(17px,2vw,22px);color:#cfcfcf;max-width:640px;margin:28px 0 36px}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero .stamp{position:absolute;right:6%;bottom:10%;width:150px;height:150px;animation:spin 18s linear infinite;z-index:2}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* бегущая строка */
+.marq{background:var(--or);color:#111;overflow:hidden;white-space:nowrap;padding:16px 0;font-family:Unbounded;font-weight:700;font-size:18px;text-transform:uppercase;transform:rotate(-1.2deg);margin:0 -2vw;position:relative;z-index:3}
+.marq div{display:inline-block;animation:mq 26s linear infinite}
+.marq.r{background:var(--bl);transform:rotate(1.2deg)}.marq.r div{animation-direction:reverse}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:110px 0;position:relative;z-index:1}
+h2{font-size:clamp(30px,5vw,68px);font-weight:900;text-transform:uppercase;margin-bottom:46px}
+h2 em{font-style:normal;color:var(--or)}
+/* плитки */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #2b2b2b}
+.tile{padding:34px 26px 40px;border-right:1px solid #2b2b2b;position:relative;overflow:hidden;min-height:300px;transition:background .35s,color .35s}
+.tile:last-child{border-right:0}
+.tile:nth-child(1){background:var(--or);color:#111}.tile:nth-child(2){background:#1a1a1a}.tile:nth-child(3){background:var(--bl);color:#111}.tile:nth-child(4){background:var(--wh);color:#111}
+.tile .n{font-family:Unbounded;font-weight:900;font-size:120px;line-height:1;opacity:.22;position:absolute;right:10px;bottom:-8px;transition:transform .5s}
+.tile:hover .n{transform:scale(1.15) rotate(-4deg);opacity:.4}
+.tile h3{font-size:20px;margin-bottom:12px;text-transform:uppercase}
+.tile p{font-size:15px;opacity:.85;max-width:220px}
+/* цифры */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stat{border-top:3px solid var(--or);padding-top:20px}
+.stat .v{font-family:Unbounded;font-weight:900;font-size:clamp(44px,7vw,92px);color:var(--or);line-height:1}
+.stat span{color:var(--mut)}
+/* портфолио */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.reel{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:9/16;background:#1a1a1a;cursor:pointer;transform-style:preserve-3d;transition:transform .25s}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 18px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-weight:700}
+.reel .cap small{display:block;font-weight:400;color:#cfcfcf}
+.reel .play{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;background:var(--or);display:grid;place-items:center;color:#111;transition:transform .3s}
+.reel:hover .play{transform:scale(1.2)}
+.reel.on .play{opacity:0}
+/* до/после-линия */
+.price{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
+.price .a{background:var(--or);color:#111;padding:54px 44px}
+.price .a .big{font-size:clamp(46px,7vw,100px);font-weight:900}
+.price .b{background:#1a1a1a;padding:54px 44px}
+.price ul{list-style:none;margin:20px 0 28px}
+.price li{padding:12px 0;border-bottom:1px solid #333;display:flex;gap:12px}
+.price li::before{content:"✓";color:var(--or);font-weight:900}
+.extras{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.extra{border:1px solid #333;border-radius:18px;padding:26px;transition:transform .3s,border-color .3s,background .3s}
+.extra:hover{transform:translateY(-8px);border-color:var(--or);background:#181818}
+.extra b{display:block;font-family:Unbounded;font-size:17px;margin-bottom:8px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-left:3px solid var(--or);padding:6px 0 6px 20px}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Unbounded;font-weight:900;font-size:44px;color:var(--or);display:block}
+.contact{text-align:center;background:var(--or);color:#111;padding:120px 0}
+.contact h2{font-size:clamp(34px,7vw,110px)}
+.contact .btn{background:#111;color:var(--wh)}
+footer{padding:28px;text-align:center;color:var(--mut);font-size:13px}
+/* reveal */
+.rv{opacity:0;transform:translateY(46px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.tiles,.steps,.extras{grid-template-columns:1fr 1fr}.reels{grid-template-columns:1fr 1fr}.price{grid-template-columns:1fr}.stats{grid-template-columns:1fr}header nav{display:none}.hero .stamp{display:none}}
+@media(max-width:560px){.tiles,.steps,.extras,.reels{grid-template-columns:1fr}.tile{border-right:0;min-height:220px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 .l{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="glow" id="glow"></div>
+<header>
+  <b>ДМИТРИЙ</b>
+  <nav><a href="#work">Работы</a><a href="#price">Цена</a><a href="#extra">Услуги</a><a href="#how">Как работаю</a></nav>
+  <a class="btn" href="https://t.me/Bender_adm23">Написать</a>
+</header>
+
+<div class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="w" style="position:relative;z-index:2">
+    <span class="tag">Ролики от 250 ₽ · удалённо</span>
+    <h1 id="h1">Рилсы, <em>которые продают</em> пока вы спите</h1>
+    <p class="sub">Люди пролистывают 9 роликов из 10. Я делаю монтаж, на котором останавливаются, досматривают и пишут «сколько стоит?». Цена от 250 ₽ за ролик: чем больше серия, тем выгоднее каждый.</p>
+    <div class="cta">
+      <a class="btn magnet" href="https://t.me/Bender_adm23?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20монтаж%20рилсов%20от%20250%20₽">Узнать цену от 250 ₽ →</a>
+      <a class="btn ghost magnet" href="#work">Смотреть работы</a>
+    </div>
+  </div>
+  <svg class="stamp" viewBox="0 0 200 200"><defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><circle cx="100" cy="100" r="92" fill="none" stroke="#F57C3E" stroke-width="2"/><text font-family="Unbounded" font-size="15" font-weight="700" fill="#F6F4F0"><textPath href="#c">• REELS • SHORTS • CLIPS • REELS • SHORTS • CLIPS </textPath></text><polygon points="88,78 88,122 126,100" fill="#F57C3E"/></svg>
+</div>
+
+<div class="marq"><div>Reels · Shorts · Субтитры · Динамика · Озвучка · Реклама · Автоматизация · Reels · Shorts · Субтитры · Динамика · Озвучка · Реклама · Автоматизация · </div></div>
+
+<section>
+  <div class="w">
+    <h2 class="rv">Монтажёр, который <em>думает как маркетолог</em></h2>
+    <div class="stats">
+      <div class="stat rv"><div class="v"><span data-n="20">0</span>+</div><span>лет в маркетинге: знаю, что заставляет людей покупать. Ролик строю под результат, а не «чтобы красиво».</span></div>
+      <div class="stat rv"><div class="v"><span data-n="5">0</span>+</div><span>лет в монтаже и автоматизации: быстро, чисто и без бесконечных переделок</span></div>
+      <div class="stat rv"><div class="v">250 ₽</div><span>цена одного ролика в серии. Регулярный контент по цене чашки кофе</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:#141414">
+  <div class="w">
+    <h2 class="rv">Посмотрите, <em>как это выглядит</em></h2>
+    <p class="rv" style="color:#cfcfcf;max-width:640px;margin:-20px 0 40px;font-size:18px">Наведите курсор (на телефоне нажмите) и включится ролик. Это реальные работы для брендов и экспертов.</p>
+    <div class="reels">
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="china_powerbank_brand.mp4"></video><div class="play">▶</div><div class="cap">Бренд-рилс · Китай<small>Динамика, озвучка, субтитры</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="srilanka_brand_v2.mp4"></video><div class="play">▶</div><div class="cap">Бренд-рилс · Шри-Ланка<small>Тревел-монтаж под музыку</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="rilc_otxody.mp4"></video><div class="play">▶</div><div class="cap">Эксперт-рилс<small>Подача знаний, акценты</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="bank_math_v2.mp4"></video><div class="play">▶</div><div class="cap">Объясняющий рилс<small>Графика и цифры</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="freedom_number.mp4"></video><div class="play">▶</div><div class="cap">Мотивационный рилс<small>Ритм и текст на экране</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="advice_1.mp4"></video><div class="play">▶</div><div class="cap">Серия советов<small>Шаблон для регулярного контента</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="kak_rabotaet.mp4"></video><div class="play">▶</div><div class="cap">Как это работает<small>Пошаговое объяснение</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="sklad_taymlaps.mp4"></video><div class="play">▶</div><div class="cap">Таймлапс · Склад<small>Ускорение и ритм</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="sklad_pro.mp4"></video><div class="play">▶</div><div class="cap">Склад · полная версия<small>Продающий сюжет</small></div></div>
+      <div class="reel rv tilt"><video muted loop playsinline preload="metadata" data-src="lesson1_demo.mp4" style="object-fit:contain"></video><div class="play">▶</div><div class="cap">Демо урока<small>Горизонтальный формат</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq r"><div>Больше охватов · Больше досмотров · Больше заявок · Больше охватов · Больше досмотров · Больше заявок · Больше охватов · Больше досмотров · Больше заявок · </div></div>
+
+<section>
+  <div class="w">
+    <h2 class="rv">Что вы получаете <em>в каждом ролике</em></h2>
+    <div class="tiles rv">
+      <div class="tile"><h3>Крючок</h3><p>Первые 3 секунды, после которых зритель не свайпает дальше</p><span class="n">1</span></div>
+      <div class="tile"><h3>Ритм</h3><p>Никакой воды и пауз: зритель досматривает до конца</p><span class="n">2</span></div>
+      <div class="tile"><h3>Субтитры</h3><p>Многие смотрят без звука, и ваша мысль всё равно доходит</p><span class="n">3</span></div>
+      <div class="tile"><h3>Под формат</h3><p>Reels, Shorts, TikTok, клипы из длинных видео</p><span class="n">4</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="price" style="background:#141414">
+  <div class="w">
+    <h2 class="rv">Ролики <em>от 250 ₽</em></h2>
+    <div class="price rv">
+      <div class="a"><div style="font-weight:700">Стоимость ролика</div><div class="big">от 250 ₽</div><div>за ролик в серии · чем больше заказ, тем ниже цена каждого</div></div>
+      <div class="b">
+        <ul>
+          <li>Монтаж по вашим исходникам и ТЗ</li>
+          <li>Крючок, ритм, субтитры, музыка, переходы</li>
+          <li>Формат под Reels, Shorts и TikTok</li>
+          <li>Ролики выходят регулярно, и аккаунт не пустует</li>
+          <li>Крупная серия: индивидуальная цена, пишите в Telegram</li>
+        </ul>
+        <a class="btn magnet" href="https://t.me/Bender_adm23?text=Здравствуйте!%20Хочу%20заказать%20серию%20рилсов">Рассчитать мою серию →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="extra">
+  <div class="w">
+    <h2 class="rv">Нужно <em>больше?</em> Сделаю и это</h2>
+    <div class="extras">
+      <div class="extra rv"><b>Автоматизация процессов</b>Уберу рутину из бизнеса, чтобы время шло на продажи</div>
+      <div class="extra rv"><b>Озвучка клоном голоса</b>Ваш голос в каждом ролике, без часов в студии</div>
+      <div class="extra rv"><b>Настройка рекламы</b>Запуск и ведение: заявки вместо слитого бюджета</div>
+      <div class="extra rv"><b>Сеть тематических каналов</b>Несколько каналов под ключ: охват растёт сразу с разных сторон</div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:#141414">
+  <div class="w">
+    <h2 class="rv">Как мы <em>работаем</em></h2>
+    <div class="steps">
+      <div class="step rv"><b>Материалы и ТЗ</b><br><span style="color:var(--mut)">Пишете в Telegram, присылаете исходники и пару слов о задаче</span></div>
+      <div class="step rv"><b>Первый вариант</b><br><span style="color:var(--mut)">Монтирую и показываю результат</span></div>
+      <div class="step rv"><b>Доводка</b><br><span style="color:var(--mut)">Учитываю ваши комментарии и довожу до идеала</span></div>
+      <div class="step rv"><b>Сдача</b><br><span style="color:var(--mut)">Готовый ролик в срок: публикуйте</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact">
+  <div class="w">
+    <h2 class="rv">Ролики <br>от 250 ₽</h2>
+    <p style="margin:0 0 32px;font-size:20px">Напишите в Telegram, какой нужен объём, и я назову цену. Отвечаю в течение дня.</p>
+    <a class="btn magnet" href="https://t.me/Bender_adm23?text=Здравствуйте!%20Хочу%20узнать%20цену%20на%20монтаж%20рилсов%20от%20250%20₽">Написать в Telegram →</a>
+    <p style="margin-top:26px">@Bender_adm23</p>
+  </div>
+</div>
+<footer>© Дмитрий · Монтаж рилсов и Shorts</footer>
+
+<script>
+// заголовок по буквам
+(function(){var h=document.getElementById('h1');var out='';var i=0;
+  h.childNodes.forEach(function(n){var em=n.nodeName==='EM';var t=n.textContent;var s='';
+    t.split(' ').forEach(function(w,wi,a){ if(!w)return; s+='<span style="display:inline-block;white-space:nowrap">'+w.split('').map(function(c){return '<span class="l" style="animation-delay:'+(i++*0.035)+'s">'+c+'</span>'}).join('')+'</span> ';});
+    out+= em?'<em>'+s+'</em>':s;});
+  h.innerHTML=out;})();
+// появление при скролле
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*0.08+'s';io.observe(el)});
+// счётчики
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,n=+el.dataset.n,t=0;co.unobserve(el);
+  var id=setInterval(function(){t+=Math.max(1,Math.round(n/30));if(t>=n){t=n;clearInterval(id)}el.textContent=t},35)})},{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(function(el){co.observe(el)});
+// свечение за курсором
+var g=document.getElementById('glow');window.addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+// магнитные кнопки
+document.querySelectorAll('.magnet').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});
+// 3D-наклон карточек и воспроизведение
+document.querySelectorAll('.reel').forEach(function(c){var v=c.querySelector('video');v.src=v.dataset.src;
+  c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+x*10+'deg) rotateX('+(-y*10)+'deg) scale(1.02)'});
+  c.addEventListener('pointerenter',function(){v.play().catch(function(){});c.classList.add('on')});
+  c.addEventListener('pointerleave',function(){c.style.transform='';v.pause();c.classList.remove('on')});
+  c.addEventListener('click',function(){v.muted=!v.muted;if(v.paused){v.play()}});});
+// параллакс блобов
+window.addEventListener('scroll',function(){var y=scrollY;document.querySelector('.b1').style.translate='0 '+(y*.25)+'px';document.querySelector('.b2').style.translate='0 '+(-y*.15)+'px'},{passive:true});
+</script>
+</body>
+</html>
